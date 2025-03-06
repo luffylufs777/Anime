@@ -1,2 +1,313 @@
-# Anime
-Anime
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World | Naruto & JJK</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f1f1f1;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Intro Animation for Mangekyo Sharingan */
+        .intro {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://example.com/mangekyo-background.gif'); /* Replace with Mangekyo Sharingan GIF */
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 3s ease-in-out forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Shaking Effect */
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Header Section */
+        header {
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #ff9b00;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            animation: shake 1s infinite;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ff9b00;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            border-radius: 10px;
+            padding: 8px 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul li a:hover {
+            color: #ff5722;
+            text-decoration: underline;
+            background-color: #222;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        /* Content Container */
+        .content-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+            color: #f1f1f1;
+        }
+
+        /* Character Information Section */
+        .character-info {
+            background-color: #333;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .character-info h3 {
+            font-size: 2.5em;
+            color: #ff9b00;
+            text-transform: uppercase;
+            animation: shake 1s infinite;
+        }
+
+        .character-info p {
+            font-size: 1.5em;
+            color: #f1f1f1;
+            margin-bottom: 10px;
+        }
+
+        .character-info .quote {
+            font-size: 1.8em;
+            color: #ff5722;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background-color: #1c1c1c;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Floating Effect for Options */
+        .floating-options {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        .floating-options button {
+            background-color: #ff5722;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .floating-options button:hover {
+            background-color: #ff9b00;
+            transform: scale(1.2);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .intro h1 {
+                font-size: 4em;
+            }
+
+            .content-container {
+                padding: 20px;
+            }
+
+            .news-item {
+                width: 90%;
+            }
+
+            .rating-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .news-item p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro Animation Section with Mangekyo Sharingan -->
+    <div class="intro">
+        <!-- Replace this GIF with your Sharingan animation -->
+        <h1>Sharingan Activates...</h1>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1 id="page-title">Anime World | Naruto & JJK</h1>
+    </header>
+
+    <!-- Floating Options for Quick Navigation -->
+    <div class="floating-options">
+        <button onclick="scrollToSection('about')">About</button>
+        <button onclick="scrollToSection('characters')">Characters</button>
+        <button onclick="scrollToSection('news')">News</button>
+        <button onclick="scrollToSection('rating')">Rate Anime</button>
+    </div>
+
+    <main>
+        <!-- Character Information Section -->
+        <section id="characters" class="character-section">
+            <h2>Famous Anime Characters</h2>
+            <div class="character-info">
+                <h3>Naruto Uzumaki</h3>
+                <p><strong>Anime:</strong> Naruto</p>
+                <p><strong>Role:</strong> Main protagonist, ninja of Konoha</p>
+                <p><strong>Specialty:</strong> Master of Shadow Clone Jutsu, Tailed Beast Jinchuriki</p>
+                <p class="quote">"I'm not gonna run away, I never go back on my word! That's my nindo: my ninja way!"</p>
+            </div>
+
+            <div class="character-info">
+                <h3>Itadori Yuji</h3>
+                <p><strong>Anime:</strong> Jujutsu Kaisen</p>
+                <p><strong>Role:</strong> Main protagonist, student of Jujutsu High</p>
+                <p><strong>Specialty:</strong> Host of Ryomen Sukuna, skilled in hand-to-hand combat</p>
+                <p class="quote">"I will just live a normal life. But I'm not normal."</p>
+            </div>
+
+            <div class="character-info">
+                <h3>Madara Uchiha</h3>
+                <p><strong>Anime:</strong> Naruto</p>
+                <p><strong>Role:</strong> Main antagonist, leader of the Uchiha clan</p>
+                <p class="quote">"The world is merely a product of your thoughts!"</p>
+            </div>
+
+            <div class="character-info">
+                <h3>Satoru Gojo</h3>
+                <p><strong>Anime:</strong> Jujutsu Kaisen</p>
+                <p><strong>Role:</strong> Teacher at Jujutsu High, one of the strongest sorcerers</p>
+                <p class="quote">"In the end, nothing matters. Except for power!"</p>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news-section">
+            <h2>Anime News</h2>
+            <div class="news-item">
+                <h3>New Naruto Movie Announced!</h3>
+                <p>Exciting news for all Naruto fans! A brand new movie will be released this summer featuring the return of the original Naruto series...</p>
+            </div>
+
+            <div class="news-item">
+                <h3>Jujutsu Kaisen Season 2 Teaser Released</h3>
+                <p>The highly anticipated second season of Jujutsu Kaisen has dropped its first teaser, showing us more of the action and characters...</p>
+            </div>
+        </section>
+
+        <!-- Rating Section -->
+        <section id="rating" class="rating-section">
+            <h2>Rate Your Favorite Anime!</h2>
+            <p>Rate your favorite anime from 1 to 10:</p>
+            <input type="range" id="rating" min="1" max="10" step="1" value="5">
+            <p>Rating: <span id="rating-value">5</span></p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Anime World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function playSound() {
+            var sound = new Audio('https://example.com/click-sound.mp3'); // Replace with your sound
+            sound.play();
+        }
+
+        // Scroll to section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Update the rating value
+        var ratingInput = document.getElementById('rating');
+        var ratingValue = document.getElementById('rating-value');
+        ratingInput.addEventListener('input', function() {
+            ratingValue.innerText = ratingInput.value;
+        });
+    </script>
+</body>
+</html>
+
